@@ -61,6 +61,9 @@ class TestTriangles(unittest.TestCase) :
     self.assertEqual(__NONE__, classify_triangle(-1, 4, 4))
     self.assertEqual(__NONE__, classify_triangle(4, -1, 4))
     self.assertEqual(__NONE__, classify_triangle(4, 4, -1))
+    self.assertEqual(__NONE__, classify_triangle([4], 2, 1))
+    self.assertEqual(__NONE__, classify_triangle(4, False, 1))
+    self.assertEqual(__NONE__, classify_triangle(4, 2, True))
     #BUG: this will fail on purpose
     self.assertEqual(__NONE__, classify_triangle(4, 0, 4))
 

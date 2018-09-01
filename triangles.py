@@ -12,6 +12,20 @@ def classify_triangle(lengthA, lengthB, lengthC):
   if lengthA is None or lengthB is None or lengthC is None:
     return None
 
+  #type checks allowing for polymorphism
+  try:
+    lengthA + 1
+    lengthB + 1
+    lengthC + 1
+  except TypeError:
+    return None
+
+  # checks for false/true as they extend int in python but won't work here
+  if lengthA is False or lengthB is False or lengthC is False:
+    return None
+  if lengthA is True or lengthB is True or lengthC is True:
+    return None
+
   # BUG: should of checked that none of the inputs were zero oops!
 
   # check that the inputs are greater than zero
